@@ -42,6 +42,7 @@ const Search = () => {
             <div className="grid grid-cols-3 sm:grid-cols-2">
               {recipe ? (
                 recipe.map((meal) => (
+
                   <Link to={`recipe/${meal.idMeal}`}>
                     <div className="rounded shadow-lg m-1">
                       <img
@@ -64,7 +65,7 @@ const Search = () => {
                 ))
               ) : (
                 <div className="py-20 text-center">
-                  <h1 className="text-center">No meal found</h1>
+                  <button text-color="red">Add new food</button>
                 </div>
               )}
             </div>
